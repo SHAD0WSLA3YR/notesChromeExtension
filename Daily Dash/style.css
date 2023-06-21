@@ -1,0 +1,278 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins",sans-serif;
+    /* background-image: linear-gradient(100deg, #EE7752, #E73C7E, #23A6D5, #23D5AB); */
+    background-image : linear-gradient(100deg ,rgb(41, 68, 150),rgb(56, 84, 167),  rgb(79, 106, 186));
+    background-size: cover;
+    background-size: 1000%;
+    animation: bg-animation 20s ease-in-out infinite alternate;
+}
+
+@keyframes bg-animation {
+    0% {
+      background-position: left;
+    }
+    100% {
+      background-position: right;
+    }
+}
+ 
+#password-container {
+    display: block;
+    text-align: center;
+    margin-top: 50px;
+}
+  
+#password-container input[type="password"] {
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    background-color: rgb(29, 49, 108);
+    color : white;
+}
+  
+#password-container button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: tomato;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+  
+#password-error {
+    margin-top: 10px;
+}
+
+#password-container button:hover {
+    background : rgb(255, 189, 177);
+    color : black;
+}
+
+header {
+    font-size : 1.5rem;
+    color: antiquewhite;
+    flex-direction: column;
+}
+
+header p {
+    font-size : 1rem;
+    text-align: center;
+    text-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.2);
+}
+
+header,
+form {
+    min-height : 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form input {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+form button {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+form input, form button {
+    padding : 0.5rem;
+    font-size : 1.7rem;
+    border :none;
+    /* background:white; */
+    background-color: rgb(29, 49, 108);
+    color: white;
+}
+
+form button {
+    color :tomato;
+    cursor: pointer;
+    /* background:white; */
+    background-color: rgb(29, 49, 108);
+    border-left: 2px solid rgb(117, 133, 182);;
+    transition: all 0.3s ease;
+}
+
+form button:hover {
+    background : rgb(255, 189, 177);
+    color : white;
+}
+
+#todo-container {
+    display : none;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-list {
+    min-width: 30%;
+    list-style: none;
+}
+
+.todo {
+    margin: 0.5rem;
+    padding: 0.3rem;
+    width: 90vw;
+    /* background: rgb(246, 246, 246); */
+    background-color: rgb(29, 49, 108);
+    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.2);
+    color :rgb(255, 255, 255);
+    font-size: 1.35rem;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.todo li {
+    flex: 1;
+}
+
+.todo-item {
+    padding : 0rem 0.5rem;
+}
+
+.trash-btn, .complete-btn {
+    background: tomato;
+    color : white;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0.6rem;
+    border-radius: 5px;
+    margin: .2rem;
+    transition: all 0.3s ease;
+}
+
+.complete-btn {
+    background: #23D5AB;
+}
+
+.trash-btn:hover {
+    background: rgb(255, 133, 112);
+    font-size: small;
+    margin: .295rem;
+}
+
+.complete-btn:hover {
+    background:#21f7c5;
+    font-size: small;
+}
+
+.fa-trash, .fa-check {
+    pointer-events: none;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.7;
+    background: #66b7a5;
+    /* rgb(34, 99, 80) */
+}
+
+.fall {
+    transform: translateX(-8rem);
+    opacity: 0;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: none;
+    box-shadow: none;
+    border: none;
+}
+
+.select {
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+select {
+    color: rgb(255, 255, 255);
+    background-color: rgb(29, 49, 108);
+    width: 10rem;
+    cursor: pointer;
+    padding: .7rem;
+    font-size: 1.5rem;
+    border-radius: 8px;
+}
+
+.select::after {
+   content: "\25BC"; 
+   position: absolute;
+   /* background: white; */
+   background-color: rgb(29, 49, 108);
+   color: tomato;
+   top: 50%;
+   right: 0;
+   transform: translate(-20%, -50%);
+   padding: .3rem;
+   margin-right: .3rem; ;
+   pointer-events: none;
+   border-radius: 4px;
+   transition: all .3s ease;
+}
+
+ .select:hover::after {
+    background : tomato;
+    color : white;
+ }
+
+
+
+@media (max-width: 700px) {
+
+    body {
+        min-width: 350px;
+        min-height: 600px;
+    }
+
+    form {
+        flex-wrap: wrap;
+    }
+
+    form input {
+        padding : 0.75rem;
+        font-size: 1.2rem;
+        margin-top: 10px;
+        width: 80%;
+    }
+
+    select {
+        width: 330px;
+    }
+
+    form button {
+        margin-top: 10px;
+    }
+
+    .todo-list {
+        min-width: 90%;
+        list-style: none;
+    }
+}
+
+
+@media (min-width: 701px) and (max-width: 1500px) {
+
+    .todo-list {
+        min-width: 60%;
+        list-style: none;
+    }
+}
