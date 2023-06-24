@@ -3,12 +3,12 @@ const todoInput = document.querySelector('.todo-input');
 const todoButton = document.querySelector('.todo-button');
 const todoList = document.querySelector('.todo-list');
 const filterOption = document.querySelector(".filter-todo");
-//password
-const passwordInput = document.getElementById("password-input");
-const passwordSubmit = document.getElementById("password-submit");
-const passwordError = document.getElementById("password-error");
-// Pre-set password
-const password = "raiha28062001";
+// //password
+// const passwordInput = document.getElementById("password-input");
+// const passwordSubmit = document.getElementById("password-submit");
+// const passwordError = document.getElementById("password-error");
+// // Pre-set password
+// const password = "raiha28062001";
 
 
 //Event Listeners 
@@ -20,19 +20,19 @@ filterOption.addEventListener('click', filterTodo);
 
 
 
-
-// Add event listener to submit button
-passwordSubmit.addEventListener("click", function () {
-  if (passwordInput.value === password) {
-    // Display Todo list
-    document.getElementById("todo-container").style.display = "flex";
-    // Hide password container
-    document.getElementById("password-container").style.display = "none";
-  } else {
-    // Display error message
-    passwordError.style.display = "block";
-  }
-});
+//Password functionality
+// // Add event listener to submit button
+// passwordSubmit.addEventListener("click", function () {
+//   if (passwordInput.value === password) {
+//     // Display Todo list
+//     document.getElementById("todo-container").style.display = "flex";
+//     // Hide password container
+//     document.getElementById("password-container").style.display = "none";
+//   } else {
+//     // Display error message
+//     passwordError.style.display = "block";
+//   }
+// });
 
 
 //Functions
